@@ -5,9 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './table.component.html',
 })
 export class TableComponent {
-
   selectedSlug: string = "";
+
   constructor() { }
+
   customers = [
     { firstName: "Henry", lastName: "Gerard", age: 21, slug: 'henry-gerard' },
     { firstName: "Michael", lastName: "Platini", age: 40, slug: 'michael-platini' },
@@ -17,11 +18,10 @@ export class TableComponent {
   ]
 
   setSlug(slug) {
-    // slug setter function
+    this.selectedSlug = slug;;
   }
 
   getSlug() {
-    // slug getter function 
-      return "random string";
+      return this.selectedSlug;
   }
 }

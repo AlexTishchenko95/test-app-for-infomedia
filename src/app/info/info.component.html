@@ -1,4 +1,4 @@
-<div class="info" *ngIf="">
+<div class="info" *ngIf="customerSlug">
   <h1 class="text-center">Customer Record</h1>
   <br />
   <table class="table table-bordered secondary-table">
@@ -13,7 +13,7 @@
       <th>State</th>
     </tr>
     <tr>
-      <td></td>
+      <td *ngFor="let customer of customers[customerSlug]">{{customer}}</td>
     </tr>
   </table>
   <br />
